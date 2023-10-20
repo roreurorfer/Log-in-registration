@@ -1,0 +1,23 @@
+// JavaScript for the register button pop-up
+
+// Get the register button and the pop-up container
+const registerButton = document.getElementById("registerButton");
+const popup = document.querySelector(".register-popup");
+const closeButton = document.getElementById("closeButton");
+
+// When the register button is clicked, show the pop-up
+registerButton.addEventListener("click", () => {
+    popup.style.display = "block";
+});
+
+// When the close button is clicked, hide the pop-up
+closeButton.addEventListener("click", () => {
+    popup.style.display = "none";
+});
+
+// Close the pop-up when the user clicks outside of it
+window.addEventListener("click", (event) => {
+    if (event.target == popup) {
+        popup.style.display = "none";
+    }
+});
